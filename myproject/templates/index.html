@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<h2> Welcome to the online word counter!</h2><br>
+<center><h1><font face = "Poppins">Please enter the text here </font> </h1>
+  <!-- <h2> My name is {{feature.name}}</h2> -->
+    <form method="POST" action="counter">
+        {% csrf_token %}
+        <textarea name="text" cols="80" rows="30"></textarea><br>
+        <input type="Submit"/>
+      </form>
+    </center>
